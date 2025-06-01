@@ -10,11 +10,11 @@ body {
     background-size: 400% 400%;
     animation: gradientShift 20s ease infinite;
         /* Custom Background Image - Uncomment to use */
-    /* background-image: url('YOUR_IMAGE_URL_HERE'); */
-    /* background-size: cover; */
-    /* background-position: center; */
-    /* background-attachment: fixed; */
-    /* background-repeat: no-repeat; */
+    background-image: url('https://i.pinimg.com/originals/dd/2c/9e/dd2c9e089b2ff3d1abb56fecd529e3f6.gif'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
 
     min-height: 100vh;
     color: #2d3748;
