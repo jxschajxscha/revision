@@ -216,6 +216,8 @@ body::before {
     border: 2px solid transparent;
     position: relative;
     overflow: hidden;
+    min-height: 60px; /* Prevents squashing */
+    flex-wrap: nowrap; /* Keeps items in one line */
 }
 
 .session::before {
@@ -259,12 +261,23 @@ body::before {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.session {
+    /* existing styles... */
+    min-height: 60px; /* Prevents squashing */
+    flex-wrap: nowrap; /* Keeps items in one line */
+}
+
 .subject-name {
     flex: 1;
     font-weight: 600;
     color: #1a202c;
     font-size: 1.05rem;
+    min-width: 0; /* Allows text to shrink properly */
+    white-space: nowrap; /* Prevents text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Shows ... if text is too long */
 }
+
 
 .progress-indicator {
     font-size: 0.9rem;
