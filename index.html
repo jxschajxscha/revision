@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision Planner | 02/06 - 09/06</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Revision Planner</h1>
+            <p class="date-range">02/06 - 09/06</p>
+            <div class="progress-overview">
+                <span class="total-sessions">33 Sessions Total</span>
+                <div class="completion-bar">
+                    <div class="completion-fill" id="completionBar"></div>
+                </div>
+                <span class="completion-text" id="completionText">0% Complete</span>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="planner-grid">
+                <!-- Monday 02/06 -->
+                <div class="day-card">
+                    <div class="day-header">
+                        <h2>Monday 02/06</h2>
+                        <span class="day-subtitle">Foundation Start</span>
+                    </div>
+                    <div class="sessions">
+                        <div class="session chemistry" data-subject="chemistry" data-session="1">
+                            <span class="session-number">1</span>
+                            <span class="subject-name">Chemistry</span>
+                            <span class="progress-indicator">1/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session physics" data-subject="physics" data-session="1">
+                            <span class="session-number">2</span>
+                            <span class="subject-name">Physics</span>
+                            <span class="progress-indicator">1/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session geography" data-subject="geography" data-session="1">
+                            <span class="session-number">3</span>
+                            <span class="subject-name">Geography</span>
+                            <span class="progress-indicator">1/2</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session english" data-subject="english" data-session="1">
+                            <span class="session-number">4</span>
+                            <span class="subject-name">English</span>
+                            <span class="progress-indicator">1/4</span>
+                            <div class="checkbox"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tuesday 03/06 -->
+                <div class="day-card power-day">
+                    <div class="day-header">
+                        <h2>Tuesday 03/06</h2>
+                        <span class="day-subtitle">Power Day - 5 Sessions</span>
+                    </div>
+                    <div class="sessions">
+                        <div class="session maths" data-subject="maths" data-session="1">
+                            <span class="session-number">1</span>
+                            <span class="subject-name">Maths</span>
+                            <span class="progress-indicator">1/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session german" data-subject="german" data-session="1">
+                            <span class="session-number">2</span>
+                            <span class="subject-name">German</span>
+                            <span class="progress-indicator">1/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session biology" data-subject="biology" data-session="1">
+                            <span class="session-number">3</span>
+                            <span class="subject-name">Biology</span>
+                            <span class="progress-indicator">1/2</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session history" data-subject="history" data-session="1">
+                            <span class="session-number">4</span>
+                            <span class="subject-name">History</span>
+                            <span class="progress-indicator">1/2</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session greek" data-subject="greek" data-session="1">
+                            <span class="session-number">5</span>
+                            <span class="subject-name">Greek</span>
+                            <span class="progress-indicator">1/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wednesday 04/06 -->
+                <div class="day-card">
+                    <div class="day-header">
+                        <h2>Wednesday 04/06</h2>
+                        <span class="day-subtitle">Pre-Exam Focus</span>
+                    </div>
+                    <div class="sessions">
+                        <div class="session french exam-prep" data-subject="french" data-session="1">
+                            <span class="session-number">1</span>
+                            <span class="subject-name">French</span>
+                            <span class="progress-indicator">1/4</span>
+                            <span class="exam-note">Prep for Thursday exam</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session chemistry" data-subject="chemistry" data-session="2">
+                            <span class="session-number">2</span>
+                            <span class="subject-name">Chemistry</span>
+                            <span class="progress-indicator">2/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session physics" data-subject="physics" data-session="2">
+                            <span class="session-number">3</span>
+                            <span class="subject-name">Physics</span>
+                            <span class="progress-indicator">2/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session english" data-subject="english" data-session="2">
+                            <span class="session-number">4</span>
+                            <span class="subject-name">English</span>
+                            <span class="progress-indicator">2/4</span>
+                            <div class="checkbox"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thursday 05/06 -->
+                <div class="day-card exam-day">
+                    <div class="day-header">
+                        <h2>Thursday 05/06</h2>
+                        <span class="day-subtitle">FRENCH LISTENING + WRITING EXAM</span>
+                    </div>
+                    <div class="sessions">
+                        <div class="session french exam-prep" data-subject="french" data-session="2">
+                            <span class="session-number">1</span>
+                            <span class="subject-name">French</span>
+                            <span class="progress-indicator">2/4</span>
+                            <span class="exam-note">Final prep before exam</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session latin" data-subject="latin" data-session="1">
+                            <span class="session-number">2</span>
+                            <span class="subject-name">Latin</span>
+                            <span class="progress-indicator">1/2</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session philosophy" data-subject="philosophy" data-session="1">
+                            <span class="session-number">3</span>
+                            <span class="subject-name">Philosophy & Theology</span>
+                            <span class="progress-indicator">1/2</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session german" data-subject="german" data-session="2">
+                            <span class="session-number">4</span>
+                            <span class="subject-name">German</span>
+                            <span class="progress-indicator">2/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Friday 06/06 -->
+                <div class="day-card">
+                    <div class="day-header">
+                        <h2>Friday 06/06</h2>
+                        <span class="day-subtitle">Recovery & Progress</span>
+                    </div>
+                    <div class="sessions">
+                        <div class="session maths" data-subject="maths" data-session="2">
+                            <span class="session-number">1</span>
+                            <span class="subject-name">Maths</span>
+                            <span class="progress-indicator">2/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session biology" data-subject="biology" data-session="2">
+                            <span class="session-number">2</span>
+                            <span class="subject-name">Biology</span>
+                            <span class="progress-indicator">2/2</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session french" data-subject="french" data-session="3">
+                            <span class="session-number">3</span>
+                            <span class="subject-name">French</span>
+                            <span class="progress-indicator">3/4</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session english" data-subject="english" data-session="3">
+                            <span class="session-number">4</span>
+                            <span class="subject-name">English</span>
+                            <span class="progress-indicator">3/4</span>
+                            <div class="checkbox"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Saturday 07/06 -->
+                <div class="day-card">
+                    <div class="day-header">
+                        <h2>Saturday 07/06</h2>
+                        <span class="day-subtitle">Completion Focus</span>
+                    </div>
+                    <div class="sessions">
+                        <div class="session chemistry" data-subject="chemistry" data-session="3">
+                            <span class="session-number">1</span>
+                            <span class="subject-name">Chemistry</span>
+                            <span class="progress-indicator">3/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session physics" data-subject="physics" data-session="3">
+                            <span class="session-number">2</span>
+                            <span class="subject-name">Physics</span>
+                            <span class="progress-indicator">3/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session history" data-subject="history" data-session="2">
+                            <span class="session-number">3</span>
+                            <span class="subject-name">History</span>
+                            <span class="progress-indicator">2/2</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session greek" data-subject="greek" data-session="2">
+                            <span class="session-number">4</span>
+                            <span class="subject-name">Greek</span>
+                            <span class="progress-indicator">2/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sunday 08/06 -->
+                <div class="day-card">
+                    <div class="day-header">
+                        <h2>Sunday 08/06</h2>
+                        <span class="day-subtitle">Final Push</span>
+                    </div>
+                    <div class="sessions">
+                        <div class="session philosophy" data-subject="philosophy" data-session="2">
+                            <span class="session-number">1</span>
+                            <span class="subject-name">Philosophy & Theology</span>
+                            <span class="progress-indicator">2/2</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session german" data-subject="german" data-session="3">
+                            <span class="session-number">2</span>
+                            <span class="subject-name">German</span>
+                            <span class="progress-indicator">3/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session maths" data-subject="maths" data-session="3">
+                            <span class="session-number">3</span>
+                            <span class="subject-name">Maths</span>
+                            <span class="progress-indicator">3/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session french" data-subject="french" data-session="4">
+                            <span class="session-number">4</span>
+                            <span class="subject-name">French</span>
+                            <span class="progress-indicator">4/4</span>
+                            <div class="checkbox"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monday 09/06 -->
+                <div class="day-card final-day">
+                    <div class="day-header">
+                        <h2>Monday 09/06</h2>
+                        <span class="day-subtitle">Final Day - Last Sprint</span>
+                    </div>
+                    <div class="sessions">
+                        <div class="session latin" data-subject="latin" data-session="2">
+                            <span class="session-number">1</span>
+                            <span class="subject-name">Latin</span>
+                            <span class="progress-indicator">2/2</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session greek" data-subject="greek" data-session="3">
+                            <span class="session-number">2</span>
+                            <span class="subject-name">Greek</span>
+                            <span class="progress-indicator">3/3</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session english" data-subject="english" data-session="4">
+                            <span class="session-number">3</span>
+                            <span class="subject-name">English</span>
+                            <span class="progress-indicator">4/4</span>
+                            <div class="checkbox"></div>
+                        </div>
+                        <div class="session geography" data-subject="geography" data-session="2">
+                            <span class="session-number">4</span>
+                            <span class="subject-name">Geography</span>
+                            <span class="progress-indicator">2/2</span>
+                            <div class="checkbox"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                            <div class="sidebar">
+                    <div class="subject-tracker">
+                        <h3>Subject Progress</h3>
+                        <div class="subject-list" id="subjectList">
+                            <!-- Subject progress will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="key-reminders">
+                        <h3>Key Reminders</h3>
+                        <div class="reminder-list">
+                            <div class="reminder-item exam">
+                                <strong>Thursday 05/06:</strong> French Listening + Writing Exam
+                            </div>
+                            <div class="reminder-item strategy">
+                                <strong>French Strategy:</strong> 2 sessions before exam, 2 after
+                            </div>
+                            <div class="reminder-item">
+                                <strong>Tuesday Power Day:</strong> 5 sessions total
+                            </div>
+                            <div class="reminder-item">
+                                <strong>Final Day Focus:</strong> Latin → Greek → English → Geography
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
+
+
+            
