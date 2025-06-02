@@ -94,9 +94,10 @@ class RevisionPlanner {
     }
 
     updateSubjectProgress() {
-        Object.keys(this.subjectTotals).forEach(subject => {
-            const completed = Array.from(this.completedSessions).filter(sessionId => 
-                sessionId.startsWith(subject)).length;
+    Object.keys(this.subjectTotals).forEach(subject => {
+        const completed = Array.from(this.completedSessions).filter(sessionId => 
+            sessionId.startsWith(subject + '-')).length;
+
             const total = this.subjectTotals[subject];
             const percentage = (completed / total) * 100;
             
