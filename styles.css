@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,32 +8,31 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe, #00f2fe, #a8edea);
+    background: linear-gradient(-45deg, #2c3e50, #34495e, #2c3e50, #1a252f);
     background-size: 400% 400%;
-    animation: gradientShift 20s ease infinite;
-        /* Custom Background Image - Uncomment to use */
-    background-image: url('https://i.pinimg.com/originals/dd/2c/9e/dd2c9e089b2ff3d1abb56fecd529e3f6.gif'); 
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed; 
-    background-repeat: no-repeat; 
-
+    animation: gradientShift 30s ease infinite;
     min-height: 100vh;
-    color: #2d3748;
+    color: #ffffff;
     line-height: 1.6;
     position: relative;
     overflow-x: hidden;
+        /* Custom Background Image - Uncomment to use */
+     background-image: url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg'); 
+     background-size: cover; 
+     background-position: center; 
+    background-attachment: fixed; 
+     background-repeat: no-repeat; 
+     background-blend-mode: overlay; 
+
 }
 
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
-    25% { background-position: 100% 50%; }
-    50% { background-position: 0% 100%; }
-    75% { background-position: 100% 0%; }
+    50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Subtle overlay pattern */
+/* Subtle paper texture overlay */
 body::before {
     content: '';
     position: fixed;
@@ -40,10 +41,9 @@ body::before {
     width: 100%;
     height: 100%;
     background-image: 
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05) 2px, transparent 2px),
-        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 2px, transparent 2px),
-        radial-gradient(circle at 40% 60%, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 80px 80px, 60px 60px, 40px 40px;
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.02) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px, 80px 80px;
     pointer-events: none;
     z-index: -1;
 }
@@ -57,32 +57,33 @@ body::before {
 .header {
     text-align: center;
     margin-bottom: 3rem;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
     padding: 2.5rem;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .header:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
 }
 
 .header h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #1a202c;
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #ffffff;
     margin-bottom: 0.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.02em;
 }
 
 .date-range {
-    font-size: 1.3rem;
-    color: #4a5568;
+    font-size: 1.2rem;
+    color: #e2e8f0;
     margin-bottom: 1.5rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .progress-overview {
@@ -94,32 +95,30 @@ body::before {
 }
 
 .total-sessions {
-    font-weight: 600;
-    color: #2d3748;
-    font-size: 1.1rem;
+    font-weight: 500;
+    color: #f8fafc;
+    font-size: 1rem;
 }
 
 .completion-bar {
-    width: 250px;
-    height: 10px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
+    width: 240px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
     overflow: hidden;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .completion-fill {
     height: 100%;
-    background: linear-gradient(90deg, #48bb78, #38a169, #2f855a);
+    background: linear-gradient(90deg, #10b981, #059669);
     width: 0%;
-    transition: width 0.5s ease;
-    box-shadow: 0 0 10px rgba(72, 187, 120, 0.5);
+    transition: width 0.6s ease;
 }
 
 .completion-text {
-    font-weight: 600;
-    color: #2d3748;
-    font-size: 1.1rem;
+    font-weight: 500;
+    color: #f8fafc;
+    font-size: 1rem;
 }
 
 .main-content {
@@ -130,56 +129,39 @@ body::before {
 
 .planner-grid {
     display: grid;
-    gap: 2rem;
+    gap: 1.8rem;
 }
 
 .day-card {
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
     padding: 2rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.day-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
-    animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+    min-width: 300px;
 }
 
 .day-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
-    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .power-day {
-    border-left: 5px solid #f6ad55;
-    background: rgba(246, 173, 85, 0.1);
+    border-left: 3px solid #f59e0b;
+    background: rgba(245, 158, 11, 0.05);
 }
 
 .exam-day {
-    border-left: 5px solid #fc8181;
-    background: rgba(252, 129, 129, 0.1);
+    border-left: 3px solid #ef4444;
+    background: rgba(239, 68, 68, 0.05);
 }
 
 .final-day {
-    border-left: 5px solid #68d391;
-    background: rgba(104, 211, 145, 0.1);
+    border-left: 3px solid #10b981;
+    background: rgba(16, 185, 129, 0.05);
 }
 
 .day-header {
@@ -187,64 +169,48 @@ body::before {
 }
 
 .day-header h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: #1a202c;
-    margin-bottom: 0.5rem;
+    color: #ffffff;
+    margin-bottom: 0.4rem;
 }
 
 .day-subtitle {
-    font-size: 1rem;
-    color: #4a5568;
-    font-weight: 500;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    font-weight: 400;
 }
 
 .sessions {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .session {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
-    padding: 1.2rem;
-    border-radius: 16px;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
     transition: all 0.3s ease;
     cursor: pointer;
-    border: 2px solid transparent;
-    position: relative;
-    overflow: hidden;
-    min-height: 60px; /* Prevents squashing */
-    flex-wrap: nowrap; /* Keeps items in one line */
-}
-
-.session::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s ease;
-}
-
-.session:hover::before {
-    left: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
+    min-width: 300px;
 }
 
 .session:hover {
-    transform: translateX(8px) scale(1.02);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(4px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .session.completed {
-    opacity: 0.75;
-    transform: scale(0.98);
-    background: rgba(72, 187, 120, 0.2) !important;
+    opacity: 0.6;
+    background: rgba(16, 185, 129, 0.1) !important;
+    border-color: rgba(16, 185, 129, 0.2);
 }
 
 .session-number {
@@ -253,71 +219,57 @@ body::before {
     justify-content: center;
     width: 28px;
     height: 28px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 50%;
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #2d3748;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.session {
-    /* existing styles... */
-    min-height: 60px; /* Prevents squashing */
-    flex-wrap: nowrap; /* Keeps items in one line */
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 .subject-name {
     flex: 1;
-    font-weight: 600;
-    color: #1a202c;
-    font-size: 1.05rem;
-    min-width: 0; /* Allows text to shrink properly */
-    white-space: nowrap; /* Prevents text wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Shows ... if text is too long */
+    font-weight: 500;
+    color: #f8fafc;
+    font-size: 1rem;
 }
 
-
 .progress-indicator {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #2d3748;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #1f2937;
     background: rgba(255, 255, 255, 0.9);
-    padding: 0.4rem 0.8rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
 }
 
 .exam-note {
-    font-size: 0.85rem;
-    color: #e53e3e;
-    font-weight: 600;
+    font-size: 0.8rem;
+    color: #fca5a5;
+    font-weight: 500;
     font-style: italic;
-    background: rgba(229, 62, 62, 0.1);
+    background: rgba(239, 68, 68, 0.1);
     padding: 0.2rem 0.5rem;
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
 .checkbox {
-    width: 24px;
-    height: 24px;
-    border: 3px solid #cbd5e0;
-    border-radius: 6px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
     transition: all 0.3s ease;
     position: relative;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .checkbox:hover {
-    border-color: #48bb78;
-    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
 }
 
 .checkbox.checked {
-    background: #48bb78;
-    border-color: #48bb78;
-    box-shadow: 0 0 15px rgba(72, 187, 120, 0.5);
+    background: #10b981;
+    border-color: #10b981;
 }
 
 .checkbox.checked::after {
@@ -327,23 +279,23 @@ body::before {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     font-weight: bold;
 }
 
-/* Enhanced Subject Colors */
-.session.chemistry { background: linear-gradient(135deg, #e6fffa, #b2f5ea, #81e6d9) !important; }
-.session.physics { background: linear-gradient(135deg, #fffbeb, #fef5e7, #fed7aa) !important; }
-.session.geography { background: linear-gradient(135deg, #f0fff4, #c6f6d5, #9ae6b4) !important; }
-.session.english { background: linear-gradient(135deg, #fef5e7, #fed7aa, #f6ad55) !important; }
-.session.maths { background: linear-gradient(135deg, #ede9fe, #ddd6fe, #c4b5fd) !important; }
-.session.german { background: linear-gradient(135deg, #fef2f2, #fecaca, #fca5a5) !important; }
-.session.biology { background: linear-gradient(135deg, #f0fdf4, #bbf7d0, #86efac) !important; }
-.session.history { background: linear-gradient(135deg, #fefce8, #fef08a, #facc15) !important; }
-.session.greek { background: linear-gradient(135deg, #fff7ed, #fed7aa, #fb923c) !important; }
-.session.french { background: linear-gradient(135deg, #f8fafc, #e2e8f0, #cbd5e0) !important; }
-.session.latin { background: linear-gradient(135deg, #dbeafe, #bfdbfe, #93c5fd) !important; }
-.session.philosophy { background: linear-gradient(135deg, #f3e8ff, #e9d5ff, #d8b4fe) !important; }
+/* Calm Subject Colors */
+.chemistry { background: rgba(56, 178, 172, 0.08) !important; }
+.physics { background: rgba(251, 146, 60, 0.08) !important; }
+.geography { background: rgba(34, 197, 94, 0.08) !important; }
+.english { background: rgba(245, 158, 11, 0.08) !important; }
+.maths { background: rgba(139, 92, 246, 0.08) !important; }
+.german { background: rgba(239, 68, 68, 0.08) !important; }
+.biology { background: rgba(16, 185, 129, 0.08) !important; }
+.history { background: rgba(234, 179, 8, 0.08) !important; }
+.greek { background: rgba(251, 146, 60, 0.08) !important; }
+.french { background: rgba(99, 102, 241, 0.08) !important; }
+.latin { background: rgba(59, 130, 246, 0.08) !important; }
+.philosophy { background: rgba(168, 85, 247, 0.08) !important; }
 
 .sidebar {
     display: flex;
@@ -352,106 +304,106 @@ body::before {
 }
 
 .subject-tracker, .key-reminders {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
 }
 
 .subject-tracker:hover, .key-reminders:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
 }
 
 .subject-tracker h3, .key-reminders h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #1a202c;
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.2rem;
     text-align: center;
 }
 
 .subject-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .subject-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
-    border-radius: 12px;
+    padding: 0.8rem;
+    border-radius: 8px;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    color: #f8fafc;
 }
 
 .subject-item:hover {
-    transform: translateX(4px);
-    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(2px);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .subject-progress {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.6rem;
 }
 
 .progress-bar {
-    width: 70px;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
+    width: 60px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
     overflow: hidden;
 }
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #48bb78, #38a169);
-    transition: width 0.5s ease;
-    box-shadow: 0 0 8px rgba(72, 187, 120, 0.4);
+    background: linear-gradient(90deg, #10b981, #059669);
+    transition: width 0.6s ease;
 }
 
 .progress-text {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #2d3748;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #e2e8f0;
 }
 
 .reminder-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 
 .reminder-item {
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    border-left: 4px solid #4299e1;
-    font-size: 0.95rem;
-    color: #2d3748;
-    font-weight: 500;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border-left: 3px solid #64748b;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    font-weight: 400;
     transition: all 0.3s ease;
 }
 
 .reminder-item:hover {
-    transform: translateX(4px);
-    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(2px);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .reminder-item.exam {
-    border-left-color: #fc8181;
-    background: rgba(252, 129, 129, 0.1);
+    border-left-color: #ef4444;
+    background: rgba(239, 68, 68, 0.05);
 }
 
 .reminder-item.strategy {
-    border-left-color: #68d391;
-    background: rgba(104, 211, 145, 0.1);
+    border-left-color: #10b981;
+    background: rgba(16, 185, 129, 0.05);
 }
 
 @media (max-width: 1024px) {
@@ -491,17 +443,13 @@ body::before {
     }
     
     .session {
-        flex-wrap: wrap;
-        gap: 0.75rem;
-    }
-    
-    .exam-note {
-        width: 100%;
-        margin-top: 0.5rem;
+        gap: 0.8rem;
+        min-width: 250px;
     }
     
     .day-card {
         padding: 1.5rem;
+        min-width: auto;
     }
     
     .subject-tracker, .key-reminders {
@@ -515,7 +463,8 @@ body::before {
     }
     
     .session {
-        padding: 1rem;
+        padding: 0.8rem;
+        min-width: 200px;
     }
     
     .day-header h2 {
