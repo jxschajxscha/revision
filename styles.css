@@ -12,7 +12,7 @@ body {
     background-size: 400% 400%;
     animation: gradientShift 30s ease infinite;
     min-height: 100vh;
-    color: #ffffff;
+    color: #000000;
     line-height: 1.6;
     position: relative;
     overflow-x: hidden;
