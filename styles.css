@@ -332,18 +332,18 @@ body::before {
 }
 
 /* Enhanced Subject Colors */
-.chemistry { background: linear-gradient(135deg, #e6fffa, #b2f5ea, #81e6d9); }
-.physics { background: linear-gradient(135deg, #fffbeb, #fef5e7, #fed7aa); }
-.geography { background: linear-gradient(135deg, #f0fff4, #c6f6d5, #9ae6b4); }
-.english { background: linear-gradient(135deg, #fef5e7, #fed7aa, #f6ad55); }
-.maths { background: linear-gradient(135deg, #ede9fe, #ddd6fe, #c4b5fd); }
-.german { background: linear-gradient(135deg, #fef2f2, #fecaca, #fca5a5); }
-.biology { background: linear-gradient(135deg, #f0fdf4, #bbf7d0, #86efac); }
-.history { background: linear-gradient(135deg, #fefce8, #fef08a, #facc15); }
-.greek { background: linear-gradient(135deg, #fff7ed, #fed7aa, #fb923c); }
-.french { background: linear-gradient(135deg, #f8fafc, #e2e8f0, #cbd5e0); }
-.latin { background: linear-gradient(135deg, #dbeafe, #bfdbfe, #93c5fd); }
-.philosophy { background: linear-gradient(135deg, #f3e8ff, #e9d5ff, #d8b4fe); }
+.session.chemistry { background: linear-gradient(135deg, #e6fffa, #b2f5ea, #81e6d9) !important; }
+.session.physics { background: linear-gradient(135deg, #fffbeb, #fef5e7, #fed7aa) !important; }
+.session.geography { background: linear-gradient(135deg, #f0fff4, #c6f6d5, #9ae6b4) !important; }
+.session.english { background: linear-gradient(135deg, #fef5e7, #fed7aa, #f6ad55) !important; }
+.session.maths { background: linear-gradient(135deg, #ede9fe, #ddd6fe, #c4b5fd) !important; }
+.session.german { background: linear-gradient(135deg, #fef2f2, #fecaca, #fca5a5) !important; }
+.session.biology { background: linear-gradient(135deg, #f0fdf4, #bbf7d0, #86efac) !important; }
+.session.history { background: linear-gradient(135deg, #fefce8, #fef08a, #facc15) !important; }
+.session.greek { background: linear-gradient(135deg, #fff7ed, #fed7aa, #fb923c) !important; }
+.session.french { background: linear-gradient(135deg, #f8fafc, #e2e8f0, #cbd5e0) !important; }
+.session.latin { background: linear-gradient(135deg, #dbeafe, #bfdbfe, #93c5fd) !important; }
+.session.philosophy { background: linear-gradient(135deg, #f3e8ff, #e9d5ff, #d8b4fe) !important; }
 
 .sidebar {
     display: flex;
