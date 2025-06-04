@@ -71,7 +71,7 @@ body.gradient-mode {
    }
    body.image-mode {
    background-color: #0c0c0c !important;
-   background-image: url('https://i.pinimg.com/474x/4f/85/fb/4f85fb80bdee8aff8a6134a921cceec8.jpg') !important;
+   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk2dLTI-zvjAnQO6VHefAQoQ4QMA9gDWzEe0ZKhV9WEgViPFUZYj2TWswW4nM7Mn2TxqI&usqp=CAU') !important;
    background-size: cover !important;
    background-position: center !important;
    background-repeat: repeat !important; /* Tiles the GIF to fill screen */
