@@ -55,17 +55,6 @@ body.gradient-mode {
    animation: gentleFlow 20s ease-in-out infinite;
 }
 
-/* Force background on problematic iPads */
-@media screen and (-webkit-min-device-pixel-ratio: 1) {
-   body {
-       background-color: #0c0c0c !important;
-   }
-   
-   body.gradient-mode {
-       background: linear-gradient(135deg, #0c0c0c 0%, #1a0033 20%, #000428 35%, #004e92 50%, #2d1b69 65%, #1a0033 80%, #0c0c0c 100%) !important;
-   }
-}
-
 /* iPad specific fixes */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
    body {
@@ -73,8 +62,9 @@ body.gradient-mode {
    }
    
    body.image-mode {
+       background-image: url('https://media1.tenor.com/m/9014ZFGozAcAAAAd/no-sleep.gif') !important; /* iPad-specific image */
        background-attachment: fixed !important; /* GIF stays completely still while scrolling */
-       background-size: cover !important; /* Fills screen with tiny zoom to avoid bars */
+       background-size: cover !important; /* Fills screen properly */
        background-position: center !important;
    }
    
@@ -82,6 +72,7 @@ body.gradient-mode {
        background-attachment: fixed !important; /* Gradient stays fixed while scrolling */
    }
 }
+
 
 
 
