@@ -9,7 +9,10 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
+        <!-- Update your header section to include the time display -->
+<header class="header">
+    <div class="header-content">
+        <div class="header-main">
             <h1>Revision Planner</h1>
             <p class="date-range">02/06 - 09/06</p>
             <div class="progress-overview">
@@ -19,7 +22,18 @@
                 </div>
                 <span class="completion-text" id="completionText">0% Complete</span>
             </div>
-        </header>
+        </div>
+        <div class="time-display">
+            <div class="current-time" id="currentTime">12:34:56 PM</div>
+            <div class="current-date" id="currentDate">Monday | 2 Jun '25</div>
+            <div class="time-progress-bar">
+    <div class="time-progress-fill" id="timeProgressFill"></div>
+</div>
+
+        </div>
+    </div>
+</header>
+
 
         <div class="main-content">
             <div class="planner-grid">
@@ -332,7 +346,11 @@
             </div>
         </div>
 
+        <script src="firebase-config.js"></script>
         <script src="script.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
     </body>
 </html>
 
