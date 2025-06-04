@@ -6,6 +6,11 @@
    box-sizing: border-box;
 }
 
+/* Universal fallback that works on ALL devices */
+html {
+   background-color: #0c0c0c !important;
+}
+
 body {
    margin: 0;
    padding: 0;
@@ -15,61 +20,67 @@ body {
    line-height: 1.6;
    position: relative;
    overflow-x: hidden;
+   transition: background 0.5s ease;
    
-   /* Default - start with gradient */
-   background: linear-gradient(135deg, 
-       #0c0c0c 0%, 
-       #1a0033 20%, 
-       #000428 35%, 
-       #004e92 50%, 
-       #2d1b69 65%, 
-       #1a0033 80%, 
-       #0c0c0c 100%
-   );
+   /* Multiple fallback layers */
+   background-color: #0c0c0c; /* Solid fallback */
+   background: #0c0c0c; /* Another fallback */
+   background: -webkit-linear-gradient(135deg, #0c0c0c 0%, #1a0033 20%, #000428 35%, #004e92 50%, #2d1b69 65%, #1a0033 80%, #0c0c0c 100%); /* Safari fallback */
+   background: linear-gradient(135deg, #0c0c0c 0%, #1a0033 20%, #000428 35%, #004e92 50%, #2d1b69 65%, #1a0033 80%, #0c0c0c 100%); /* Modern browsers */
    background-size: 300% 300%;
-   background-attachment: fixed; /* Keeps gradient fixed while scrolling */
+   background-attachment: fixed;
    animation: gentleFlow 20s ease-in-out infinite;
 }
 
-/* Image mode - fixed background */
+/* Image mode with multiple fallbacks */
 body.image-mode {
+   background-color: #0c0c0c !important; /* Solid fallback */
    background-image: url('https://github.com/jxschajxscha/testrevolution/blob/main/assets/images/R2BEUCM.gif?raw=true');
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-attachment: fixed; /* Keeps image completely still while scrolling */
-   animation: none;
-}
-
-/* Gradient mode - fixed background */
-body.gradient-mode {
-   background-image: none;
-   background: linear-gradient(135deg, 
-       #0c0c0c 0%, 
-       #1a0033 20%, 
-       #000428 35%, 
-       #004e92 50%, 
-       #2d1b69 65%, 
-       #1a0033 80%, 
-       #0c0c0c 100%
-   );
-   background-size: 300% 300%;
-   background-attachment: fixed; /* Keeps gradient fixed while scrolling */
-   animation: gentleFlow 20s ease-in-out infinite;
-}
-
-
-/* Image background mode */
-body.image-mode {
-   background: 
-       linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-       url('https://github.com/jxschajxscha/testrevolution/blob/main/assets/images/R2BEUCM.gif?raw=true');
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
    background-attachment: fixed;
    animation: none;
 }
+
+/* Gradient mode with multiple fallbacks */
+body.gradient-mode {
+   background-color: #0c0c0c !important; /* Solid fallback */
+   background-image: none;
+   background: #0c0c0c; /* Solid fallback */
+   background: -webkit-linear-gradient(135deg, #0c0c0c 0%, #1a0033 20%, #000428 35%, #004e92 50%, #2d1b69 65%, #1a0033 80%, #0c0c0c 100%); /* Safari fallback */
+   background: linear-gradient(135deg, #0c0c0c 0%, #1a0033 20%, #000428 35%, #004e92 50%, #2d1b69 65%, #1a0033 80%, #0c0c0c 100%); /* Modern browsers */
+   background-size: 300% 300%;
+   background-attachment: fixed;
+   animation: gentleFlow 20s ease-in-out infinite;
+}
+
+/* Force background on problematic iPads */
+@media screen and (-webkit-min-device-pixel-ratio: 1) {
+   body {
+       background-color: #0c0c0c !important;
+   }
+   
+   body.gradient-mode {
+       background: linear-gradient(135deg, #0c0c0c 0%, #1a0033 20%, #000428 35%, #004e92 50%, #2d1b69 65%, #1a0033 80%, #0c0c0c 100%) !important;
+   }
+}
+
+/* iPad specific fixes */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+   body {
+       background-attachment: scroll !important; /* Some iPads hate fixed */
+   }
+   
+   body.image-mode {
+       background-attachment: scroll !important;
+   }
+   
+   body.gradient-mode {
+       background-attachment: scroll !important;
+   }
+}
+
 
 /* Gentle flowing animation for gradient */
 @keyframes gentleFlow {
