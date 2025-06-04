@@ -44,17 +44,22 @@ body.gradient-mode {
    animation: gentleFlow 20s ease-in-out infinite;
 }
 
-/* Image background mode */
+/* Keep all your existing gradient and button code exactly the same */
+/* ONLY change the image background mode */
+
+/* Image background mode - try different image approach */
 body.image-mode {
+   background-color: #1a1a2e !important;
    background: 
        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-       url('https://github.com/jxschajxscha/testrevolution/blob/main/assets/images/R2BEUCM.gif?raw=true');
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   animation: none;
+       url('https://github.com/jxschajxscha/testrevolution/blob/main/assets/images/eHVbs2Q.gif?raw=true') !important;
+   background-size: cover !important;
+   background-position: center !important;
+   background-repeat: no-repeat !important;
+   background-attachment: scroll !important;
+   animation: none !important;
 }
+
 
 /* Gentle flowing animation for gradient */
 @keyframes gentleFlow {
