@@ -73,11 +73,14 @@ body.gradient-mode {
    body.image-mode {
        background-image: url('https://media1.tenor.com/m/9014ZFGozAcAAAAd/no-sleep.gif') !important; /* iPad-specific image */
        background-attachment: fixed !important; /* GIF stays completely still while scrolling */
-       background-size: cover !important; /* Fills screen properly */
+       background-size: contain !important; /* Shows full image without cropping */
        background-position: center !important;
+       background-repeat: no-repeat !important;
+       background-color: #0c0c0c !important; /* Dark background for any empty space */
        animation: none !important; /* No animation for image mode */
    }
 }
+
 
 /* Also add webkit prefix to the main animation */
 @keyframes gentleFlow {
