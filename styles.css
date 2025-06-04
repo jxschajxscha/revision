@@ -13,12 +13,61 @@ body {
    line-height: 1.6;
    position: relative;
    overflow-x: hidden;
-   /* Static Background Image */
+   /* Updated background for better iPad compatibility */
    background-image: url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg');
    background-size: cover;
    background-position: center;
-   background-attachment: fixed;
    background-repeat: no-repeat;
+   /* Remove fixed attachment for mobile/tablet */
+   background-attachment: scroll;
+}
+
+/* Add specific iPad fixes */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+   body {
+       background-attachment: scroll !important;
+       background-size: cover !important;
+       background-position: center center !important;
+       /* Force background to load */
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+   }
+   
+   /* Add a fallback background color */
+   body::after {
+       content: '';
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+       z-index: -2;
+   }
+}
+
+/* General tablet/mobile fix */
+@media (max-width: 1024px) {
+   body {
+       background-attachment: scroll !important;
+       /* Add fallback gradient */
+       background-image: 
+           url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg'),
+           linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+   }
+}
+
+/* Alternative: If the image still doesn't load, use this fallback */
+@supports not (background-attachment: fixed) {
+   body {
+       background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+       background-image: url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg');
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+       background-attachment: scroll;
+   }
 }
 
 /* Subtle paper texture overlay */
