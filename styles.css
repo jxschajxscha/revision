@@ -69,17 +69,17 @@ body.gradient-mode {
 /* iPad specific fixes */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
    body {
-       background-attachment: scroll !important; /* Some iPads hate fixed */
+       background-attachment: fixed !important; /* Keeps background fixed while scrolling */
    }
    
    body.image-mode {
-   background-attachment: scroll !important;
-   background-size: cover !important; /* Fills screen but crops edges if needed */
-   background-position: center center !important;
-}
-
+       background-attachment: fixed !important; /* GIF stays completely still while scrolling */
+       background-size: cover !important; /* Fills screen with tiny zoom to avoid bars */
+       background-position: center !important;
+   }
+   
    body.gradient-mode {
-       background-attachment: scroll !important;
+       background-attachment: fixed !important; /* Gradient stays fixed while scrolling */
    }
 }
 
