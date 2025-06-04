@@ -62,7 +62,7 @@ body.gradient-mode {
    }
    
    body.image-mode {
-       background-image: url('https://media1.tenor.com/m/9014ZFGozAcAAAAd/no-sleep.gif') !important; /* iPad-specific image */
+       background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/52cf024e-4cc2-4480-aa9b-192e14e46400/d9j8mgh-6ef27d9e-2274-452d-8d1f-132feaa53221.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzUyY2YwMjRlLTRjYzItNDQ4MC1hYTliLTE5MmUxNGU0NjQwMFwvZDlqOG1naC02ZWYyN2Q5ZS0yMjc0LTQ1MmQtOGQxZi0xMzJmZWFhNTMyMjEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.UBxmv8p9M96wh314ZuZwgXlWUou9tsJN4PAMPdG1Ev8') !important; /* iPad-specific image */
        background-attachment: fixed !important; /* GIF stays completely still while scrolling */
        background-size: cover !important; /* Fills screen properly */
        background-position: center !important;
