@@ -13,28 +13,77 @@ body {
    line-height: 1.6;
    position: relative;
    overflow-x: hidden;
-   /* Updated background for better iPad compatibility */
-   background-image: url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg');
-   background-size: cover;
-   background-position: center;
+   /* Sophisticated animated fallback */
+   background: 
+       radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3), transparent 50%),
+       radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15), transparent 50%),
+       radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2), transparent 50%),
+       linear-gradient(135deg, #000000 0%, #1a0a1a 25%, #0a0a1a 50%, #1a1a0a 75%, #000000 100%);
+   background-size: 400% 400%, 300% 300%, 500% 500%, 400% 400%;
+   animation: sophisticatedFlow 20s ease-in-out infinite;
+   /* Image overlay - kept on all devices */
+   background-image: 
+       radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3), transparent 50%),
+       radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15), transparent 50%),
+       radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2), transparent 50%),
+       linear-gradient(135deg, #000000 0%, #1a0a1a 25%, #0a0a1a 50%, #1a1a0a 75%, #000000 100%),
+       url('https://i.ibb.co/wZPmb6tk/1691244315-en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg');
+   background-size: 400% 400%, 300% 300%, 500% 500%, 400% 400%, cover;
+   background-position: 0% 50%, 100% 50%, 50% 0%, 0% 50%, center;
    background-repeat: no-repeat;
-   /* Remove fixed attachment for mobile/tablet */
-   background-attachment: scroll;
 }
 
-/* Add specific iPad fixes */
+/* Sophisticated multi-layer animation */
+@keyframes sophisticatedFlow {
+   0% {
+       background-position: 0% 50%, 100% 50%, 50% 0%, 0% 50%, center;
+   }
+   25% {
+       background-position: 100% 50%, 0% 100%, 0% 50%, 50% 100%, center;
+   }
+   50% {
+       background-position: 50% 100%, 50% 0%, 100% 50%, 100% 50%, center;
+   }
+   75% {
+       background-position: 0% 0%, 100% 100%, 25% 75%, 25% 0%, center;
+   }
+   100% {
+       background-position: 0% 50%, 100% 50%, 50% 0%, 0% 50%, center;
+   }
+}
+
+/* Desktop - fixed attachment */
+@media screen and (min-width: 1025px) {
+   body {
+       background-attachment: scroll, scroll, scroll, scroll, fixed;
+   }
+}
+
+/* Tablets and iPads - scroll attachment but keep image */
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
    body {
+       background-attachment: scroll, scroll, scroll, scroll, scroll !important;
+       /* Slightly slower animation for tablets */
+       animation: sophisticatedFlow 25s ease-in-out infinite;
+   }
+}
+
+/* Mobile - scroll attachment, keep image, optimize animation */
+@media (max-width: 767px) {
+   body {
        background-attachment: scroll !important;
-       background-size: cover !important;
-       background-position: center center !important;
-       /* Force background to load */
-       -webkit-background-size: cover;
-       -moz-background-size: cover;
-       -o-background-size: cover;
+       /* Slower, more subtle animation for mobile performance */
+       animation: sophisticatedFlow 30s ease-in-out infinite;
+   }
+}
+
+/* Enhanced animation for devices that support it */
+@media (prefers-reduced-motion: no-preference) {
+   body {
+       animation: sophisticatedFlow 20s ease-in-out infinite;
    }
    
-   /* Add a fallback background color */
+   /* Add subtle floating particles effect */
    body::after {
        content: '';
        position: fixed;
@@ -42,33 +91,38 @@ body {
        left: 0;
        width: 100%;
        height: 100%;
-       background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
-       z-index: -2;
-   }
-}
-
-/* General tablet/mobile fix */
-@media (max-width: 1024px) {
-   body {
-       background-attachment: scroll !important;
-       /* Add fallback gradient */
        background-image: 
-           url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg'),
-           linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+           radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.1), transparent),
+           radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.05), transparent),
+           radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.08), transparent),
+           radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.03), transparent);
+       background-repeat: repeat;
+       background-size: 200px 100px;
+       animation: floatingParticles 40s linear infinite;
+       pointer-events: none;
+       z-index: -1;
    }
 }
 
-/* Alternative: If the image still doesn't load, use this fallback */
-@supports not (background-attachment: fixed) {
+@keyframes floatingParticles {
+   0% { transform: translateY(0px) translateX(0px); }
+   25% { transform: translateY(-20px) translateX(10px); }
+   50% { transform: translateY(-40px) translateX(-5px); }
+   75% { transform: translateY(-20px) translateX(-10px); }
+   100% { transform: translateY(0px) translateX(0px); }
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
    body {
-       background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
-       background-image: url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg');
-       background-size: cover;
-       background-position: center;
-       background-repeat: no-repeat;
-       background-attachment: scroll;
+       animation: none;
+   }
+   
+   body::after {
+       animation: none;
    }
 }
+
 
 /* Subtle paper texture overlay */
 body::before {
