@@ -7,15 +7,16 @@
 }
 
 body {
+   margin: 0;
+   padding: 0;
    font-family: 'Karla', 'Roboto', sans-serif;
    min-height: 100vh;
    color: #ffffff;
    line-height: 1.6;
    position: relative;
    overflow-x: hidden;
-   transition: background 0.5s ease;
    
-   /* More interesting dark gradient */
+   /* Default - start with gradient like your working approach */
    background: linear-gradient(135deg, 
        #0c0c0c 0%, 
        #1a0033 20%, 
@@ -29,46 +30,38 @@ body {
    animation: gentleFlow 20s ease-in-out infinite;
 }
 
-/* Gradient mode */
-body.gradient-mode {
-   background: linear-gradient(135deg, 
-       #0c0c0c 0%, 
-       #1a0033 20%, 
-       #000428 35%, 
-       #004e92 50%, 
-       #2d1b69 65%, 
-       #1a0033 80%, 
-       #0c0c0c 100%
-   );
-   background-size: 300% 300%;
-   animation: gentleFlow 20s ease-in-out infinite;
-}
-
-/* Keep all your existing gradient and button code exactly the same */
-/* ONLY change the image background mode */
-
-/* Image background mode - try different image approach */
+/* When switching to image - simple direct approach */
 body.image-mode {
-   background-color: #1a1a2e !important;
-   background: 
-       linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-       url('https://github.com/jxschajxscha/testrevolution/blob/main/assets/images/eHVbs2Q.gif?raw=true') !important;
-   background-size: cover !important;
-   background-position: center !important;
-   background-repeat: no-repeat !important;
-   background-attachment: scroll !important;
-   animation: none !important;
+   background-image: url('https://github.com/jxschajxscha/testrevolution/blob/main/assets/images/R2BEUCM.gif?raw=true');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   animation: none;
 }
 
+/* When switching back to gradient - simple direct approach */
+body.gradient-mode {
+   background-image: none;
+   background: linear-gradient(135deg, 
+       #0c0c0c 0%, 
+       #1a0033 20%, 
+       #000428 35%, 
+       #004e92 50%, 
+       #2d1b69 65%, 
+       #1a0033 80%, 
+       #0c0c0c 100%
+   );
+   background-size: 300% 300%;
+   animation: gentleFlow 20s ease-in-out infinite;
+}
 
-/* Gentle flowing animation for gradient */
+/* Keep your existing animation and button styles exactly the same */
 @keyframes gentleFlow {
    0% { background-position: 0% 50%; }
    50% { background-position: 100% 50%; }
    100% { background-position: 0% 50%; }
 }
 
-/* Toggle button at bottom of page */
 .background-toggle {
    position: fixed;
    bottom: 20px;
@@ -100,21 +93,17 @@ body.image-mode {
    transform: translateY(0px);
 }
 
-/* SVG icons */
 .toggle-icon {
    width: 16px;
    height: 16px;
    fill: currentColor;
 }
 
-/* Respect motion preferences */
 @media (prefers-reduced-motion: reduce) {
    body.gradient-mode {
        animation: none !important;
    }
 }
-
-
 
 
 
