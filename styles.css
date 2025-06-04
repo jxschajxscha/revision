@@ -61,18 +61,36 @@ body.gradient-mode {
        background-attachment: fixed !important; /* Keeps background fixed while scrolling */
    }
    
+   body.gradient-mode {
+       background-attachment: fixed !important; /* Gradient stays fixed while scrolling */
+       /* Force animation for iPad */
+       -webkit-animation: gentleFlow 20s ease-in-out infinite !important;
+       animation: gentleFlow 20s ease-in-out infinite !important;
+       /* Ensure background size for animation */
+       background-size: 300% 300% !important;
+   }
+   
    body.image-mode {
-       background-image: url('https://i.redd.it/lqsxp8yitskb1.gif') !important; /* iPad-specific image */
+       background-image: url('https://media1.tenor.com/m/9014ZFGozAcAAAAd/no-sleep.gif') !important; /* iPad-specific image */
        background-attachment: fixed !important; /* GIF stays completely still while scrolling */
        background-size: cover !important; /* Fills screen properly */
        background-position: center !important;
-   }
-   
-   body.gradient-mode {
-       background-attachment: fixed !important; /* Gradient stays fixed while scrolling */
+       animation: none !important; /* No animation for image mode */
    }
 }
 
+/* Also add webkit prefix to the main animation */
+@keyframes gentleFlow {
+   0% { background-position: 0% 50%; }
+   50% { background-position: 100% 50%; }
+   100% { background-position: 0% 50%; }
+}
+
+@-webkit-keyframes gentleFlow {
+   0% { background-position: 0% 50%; }
+   50% { background-position: 100% 50%; }
+   100% { background-position: 0% 50%; }
+}
 
 
 
