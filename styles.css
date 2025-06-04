@@ -74,12 +74,16 @@ body.gradient-mode {
    
    body.image-mode {
        background-attachment: scroll !important;
+       background-size: contain !important; /* Shows full image without cropping on iPad */
+       background-position: center !important;
+       background-color: #0c0c0c !important; /* Dark background for letterboxing */
    }
    
    body.gradient-mode {
        background-attachment: scroll !important;
    }
 }
+
 
 
 /* Gentle flowing animation for gradient */
