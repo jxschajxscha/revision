@@ -13,74 +13,104 @@ body {
    line-height: 1.6;
    position: relative;
    overflow-x: hidden;
+   transition: background 0.5s ease;
    
-   /* Image for ALL devices */
-   background: 
-       linear-gradient(45deg, 
-           rgba(255, 0, 150, 0.1) 0%, 
-           rgba(0, 255, 200, 0.1) 25%, 
-           rgba(150, 100, 255, 0.1) 50%, 
-           rgba(255, 150, 0, 0.1) 75%, 
-           rgba(255, 0, 150, 0.1) 100%
-       ),
-       url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg');
-   
-   background-size: 400% 400%, cover;
-   background-position: 0% 50%, center;
-   background-repeat: no-repeat, no-repeat;
-   background-attachment: scroll, fixed;
-   
-   /* Smooth rainbow transition as backup */
-   animation: smoothRainbow 15s ease-in-out infinite;
-}
-
-/* Smooth rainbow backup animation */
-@keyframes smoothRainbow {
-   0% { background-position: 0% 50%, center; }
-   50% { background-position: 100% 50%, center; }
-   100% { background-position: 0% 50%, center; }
-}
-
-/* Fallback for devices that can't load the image */
-body::before {
-   content: '';
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background: linear-gradient(45deg, 
-       #ff0096 0%, 
-       #00ffc8 25%, 
-       #9664ff 50%, 
-       #ff9600 75%, 
-       #ff0096 100%
+   /* More interesting dark gradient */
+   background: linear-gradient(135deg, 
+       #0c0c0c 0%, 
+       #1a0033 20%, 
+       #000428 35%, 
+       #004e92 50%, 
+       #2d1b69 65%, 
+       #1a0033 80%, 
+       #0c0c0c 100%
    );
-   background-size: 400% 400%;
-   animation: smoothRainbow 15s ease-in-out infinite;
-   z-index: -1;
-   pointer-events: none;
-   opacity: 0.3;
+   background-size: 300% 300%;
+   animation: gentleFlow 20s ease-in-out infinite;
 }
 
-/* Remove all bubble animations */
-body::after,
-html::before,
-html::after {
-   display: none;
+/* Gradient mode */
+body.gradient-mode {
+   background: linear-gradient(135deg, 
+       #0c0c0c 0%, 
+       #1a0033 20%, 
+       #000428 35%, 
+       #004e92 50%, 
+       #2d1b69 65%, 
+       #1a0033 80%, 
+       #0c0c0c 100%
+   );
+   background-size: 300% 300%;
+   animation: gentleFlow 20s ease-in-out infinite;
 }
 
-/* Respect motion preferences - keep image, remove animation */
+/* Image background mode */
+body.image-mode {
+   background: 
+       linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+       url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   animation: none;
+}
+
+/* Gentle flowing animation for gradient */
+@keyframes gentleFlow {
+   0% { background-position: 0% 50%; }
+   50% { background-position: 100% 50%; }
+   100% { background-position: 0% 50%; }
+}
+
+/* Toggle button at bottom of page */
+.background-toggle {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   background: rgba(255, 255, 255, 0.15);
+   backdrop-filter: blur(10px);
+   border: 1px solid rgba(255, 255, 255, 0.2);
+   border-radius: 50px;
+   padding: 12px 20px;
+   color: white;
+   cursor: pointer;
+   font-size: 14px;
+   font-weight: 500;
+   transition: all 0.3s ease;
+   z-index: 1000;
+   user-select: none;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+}
+
+.background-toggle:hover {
+   background: rgba(255, 255, 255, 0.25);
+   transform: translateY(-2px);
+   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.background-toggle:active {
+   transform: translateY(0px);
+}
+
+/* SVG icons */
+.toggle-icon {
+   width: 16px;
+   height: 16px;
+   fill: currentColor;
+}
+
+/* Respect motion preferences */
 @media (prefers-reduced-motion: reduce) {
-   body,
-   body::before {
+   body.gradient-mode {
        animation: none !important;
    }
-   
-   body {
-       background-position: 0% 50%, center;
-   }
 }
+
+
+
 
 
 
