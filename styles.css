@@ -62,7 +62,7 @@ body.gradient-mode {
    }
    
    body.image-mode {
-       background-image: url('https://i.redd.it/aorqcduh9cm61.gif') !important; /* iPad-specific image */
+       background-image: url('https://i.ibb.co/d0ZkZfgS/Qf0c.gif') !important; /* iPad-specific image */
        background-attachment: fixed !important; /* GIF stays completely still while scrolling */
        background-size: cover !important; /* Fills screen properly */
        background-position: center !important;
@@ -200,6 +200,8 @@ body::before {
    line-height: 1;
    letter-spacing: -0.02em;
    font-variant-numeric: tabular-nums;
+   white-space: nowrap; /* Prevents line breaks */
+   min-width: 220px; /* Ensures enough space for "12:34:56 PM" */
 }
 
 .current-date {
@@ -585,11 +587,13 @@ body::before {
    }
    
    .time-display {
-       position: static;
-       text-align: center;
-       margin-top: 1rem;
-       width: 100%;
-   }
+   position: absolute;
+   top: 2.5rem;
+   right: 2.5rem;
+   text-align: left;
+   min-width: 220px; /* Increased from 200px */
+   width: 220px; /* Increased from 200px */
+}
    
    .header-content {
        flex-direction: column;
