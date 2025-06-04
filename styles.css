@@ -62,7 +62,7 @@ body.gradient-mode {
    }
    
    body.image-mode {
-       background-image: url('https://i.ibb.co/d0ZkZfgS/Qf0c.gif') !important; /* iPad-specific image */
+       background-image: url('https://media1.tenor.com/m/9014ZFGozAcAAAAd/no-sleep.gif') !important; /* iPad-specific image */
        background-attachment: fixed !important; /* GIF stays completely still while scrolling */
        background-size: cover !important; /* Fills screen properly */
        background-position: center !important;
@@ -201,7 +201,7 @@ body::before {
    letter-spacing: -0.02em;
    font-variant-numeric: tabular-nums;
    white-space: nowrap; /* Prevents line breaks */
-   min-width: 220px; /* Ensures enough space for "12:34:56 PM" */
+   text-align: right; /* Aligns time to the right */
 }
 
 .current-date {
@@ -212,6 +212,7 @@ body::before {
    margin-top: 0.3rem;
    line-height: 1;
    letter-spacing: 0.1em;
+   text-align: right; /* Aligns date to the right too */
 }
 
 .time-progress-bar {
@@ -590,9 +591,9 @@ body::before {
    position: absolute;
    top: 2.5rem;
    right: 2.5rem;
-   text-align: left;
-   min-width: 220px; /* Increased from 200px */
-   width: 220px; /* Increased from 200px */
+   text-align: right; /* Container aligned right */
+   min-width: 220px;
+   width: 220px;
 }
    
    .header-content {
