@@ -13,124 +13,75 @@ body {
    line-height: 1.6;
    position: relative;
    overflow-x: hidden;
-   /* Sophisticated animated fallback */
+   
+   /* Image for ALL devices */
    background: 
-       radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3), transparent 50%),
-       radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15), transparent 50%),
-       radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2), transparent 50%),
-       linear-gradient(135deg, #000000 0%, #1a0a1a 25%, #0a0a1a 50%, #1a1a0a 75%, #000000 100%);
-   background-size: 400% 400%, 300% 300%, 500% 500%, 400% 400%;
-   animation: sophisticatedFlow 20s ease-in-out infinite;
+       linear-gradient(45deg, 
+           rgba(255, 0, 150, 0.1) 0%, 
+           rgba(0, 255, 200, 0.1) 25%, 
+           rgba(150, 100, 255, 0.1) 50%, 
+           rgba(255, 150, 0, 0.1) 75%, 
+           rgba(255, 0, 150, 0.1) 100%
+       ),
+       url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg');
+   
+   background-size: 400% 400%, cover;
+   background-position: 0% 50%, center;
+   background-repeat: no-repeat, no-repeat;
+   background-attachment: scroll, fixed;
+   
+   /* Smooth rainbow transition as backup */
+   animation: smoothRainbow 15s ease-in-out infinite;
 }
 
-/* Desktop - show full image at 400% zoom with fixed attachment */
-@media screen and (min-width: 1025px) {
-   body {
-       background-image: url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg');
-       background-size: 100% !important; /* Show whole image zoomed to 400% */
-       background-position: center center !important;
-       background-repeat: no-repeat !important;
-       background-attachment: fixed !important;
-   }
+/* Smooth rainbow backup animation */
+@keyframes smoothRainbow {
+   0% { background-position: 0% 50%, center; }
+   50% { background-position: 100% 50%, center; }
+   100% { background-position: 0% 50%, center; }
 }
 
-/* Tablets and iPads - show image with scroll attachment */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-   body {
-       background-image: url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg') !important;
-       background-size: cover !important;
-       background-position: center center !important;
-       background-repeat: no-repeat !important;
-       background-attachment: scroll !important;
-       /* Keep animation as fallback */
-       animation: sophisticatedFlow 25s ease-in-out infinite;
-   }
+/* Fallback for devices that can't load the image */
+body::before {
+   content: '';
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(45deg, 
+       #ff0096 0%, 
+       #00ffc8 25%, 
+       #9664ff 50%, 
+       #ff9600 75%, 
+       #ff0096 100%
+   );
+   background-size: 400% 400%;
+   animation: smoothRainbow 15s ease-in-out infinite;
+   z-index: -1;
+   pointer-events: none;
+   opacity: 0.3;
 }
 
-/* Mobile - show image with scroll attachment and fallback animation */
-@media (max-width: 767px) {
-   body {
-       /* Ensure fallback animation shows first */
-       background: 
-           radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3), transparent 50%),
-           radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15), transparent 50%),
-           radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2), transparent 50%),
-           linear-gradient(135deg, #000000 0%, #1a0a1a 25%, #0a0a1a 50%, #1a1a0a 75%, #000000 100%) !important;
-       background-size: 400% 400%, 300% 300%, 500% 500%, 400% 400% !important;
-       animation: sophisticatedFlow 30s ease-in-out infinite !important;
-       
-       /* Try to load image on top */
-       background-image: 
-           radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3), transparent 50%),
-           radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15), transparent 50%),
-           radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2), transparent 50%),
-           linear-gradient(135deg, #000000 0%, #1a0a1a 25%, #0a0a1a 50%, #1a1a0a 75%, #000000 100%),
-           url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg') !important;
-       background-size: 400% 400%, 300% 300%, 500% 500%, 400% 400%, cover !important;
-       background-position: 0% 50%, 100% 50%, 50% 0%, 0% 50%, center !important;
-       background-repeat: no-repeat !important;
-       background-attachment: scroll !important;
-   }
+/* Remove all bubble animations */
+body::after,
+html::before,
+html::after {
+   display: none;
 }
 
-/* Sophisticated multi-layer animation */
-@keyframes sophisticatedFlow {
-   0% {
-       background-position: 0% 50%, 100% 50%, 50% 0%, 0% 50%;
-   }
-   25% {
-       background-position: 100% 50%, 0% 100%, 0% 50%, 50% 100%;
-   }
-   50% {
-       background-position: 50% 100%, 50% 0%, 100% 50%, 100% 50%;
-   }
-   75% {
-       background-position: 0% 0%, 100% 100%, 25% 75%, 25% 0%;
-   }
-   100% {
-       background-position: 0% 50%, 100% 50%, 50% 0%, 0% 50%;
-   }
-}
-
-/* Enhanced animation for devices that support it */
-@media (prefers-reduced-motion: no-preference) {
-   body::after {
-       content: '';
-       position: fixed;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       background-image: 
-           radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.1), transparent),
-           radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.05), transparent),
-           radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.08), transparent);
-       background-repeat: repeat;
-       background-size: 200px 100px;
-       animation: floatingParticles 40s linear infinite;
-       pointer-events: none;
-       z-index: -1;
-   }
-}
-
-@keyframes floatingParticles {
-   0% { transform: translateY(0px) translateX(0px); }
-   25% { transform: translateY(-20px) translateX(10px); }
-   50% { transform: translateY(-40px) translateX(-5px); }
-   75% { transform: translateY(-20px) translateX(-10px); }
-   100% { transform: translateY(0px) translateX(0px); }
-}
-
-/* Respect user motion preferences */
+/* Respect motion preferences - keep image, remove animation */
 @media (prefers-reduced-motion: reduce) {
-   body {
-       animation: none;
+   body,
+   body::before {
+       animation: none !important;
    }
    
-   body::after {
-       animation: none;
+   body {
+       background-position: 0% 50%, center;
    }
 }
+
 
 
 
