@@ -702,7 +702,60 @@ document.addEventListener('DOMContentLoaded', () => {
        });
    }
 });
+// ... all your existing RevisionPlanner code stays here ...
 
+// ADD THIS NEW CODE AT THE VERY END:
+// Background toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // SVG icons
+    const imageIcon = `
+        <svg class="toggle-icon" viewBox="0 0 24 24">
+            <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+        </svg>
+    `;
+    
+    const gradientIcon = `
+        <svg class="toggle-icon" viewBox="0 0 24 24">
+            <path d="M11 9h2v2h-2zm-2 2h2v2H9zm4 0h2v2h-2zm2-2h2v2h-2zM7 9h2v2H7zm12-6H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 18H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm2-7h-2v2h2v2h-2v-2h-2v2h-2v-2h-2v2H9v-2H7v2H5v-2h2v-2H5V9h2V7H5V5h2v2h2V5h2v2h2V5h2v2h2V5h2v2h-2v2h2v2z"/>
+        </svg>
+    `;
+    
+    // Create toggle button
+    const toggleButton = document.createElement('button');
+    toggleButton.className = 'background-toggle';
+    toggleButton.innerHTML = imageIcon + 'Switch to Image';
+    document.body.appendChild(toggleButton);
+    
+    // Set initial state
+    let isImageMode = false;
+    document.body.classList.add('gradient-mode');
+    
+    // Toggle function
+    toggleButton.addEventListener('click', function() {
+        if (isImageMode) {
+            // Switch to gradient
+            document.body.classList.remove('image-mode');
+            document.body.classList.add('gradient-mode');
+            toggleButton.innerHTML = imageIcon + 'Switch to Image';
+            isImageMode = false;
+        } else {
+            // Switch to image
+            document.body.classList.remove('gradient-mode');
+            document.body.classList.add('image-mode');
+            toggleButton.innerHTML = gradientIcon + 'Switch to Gradient';
+            isImageMode = true;
+        }
+        
+        // Save preference
+        localStorage.setItem('backgroundMode', isImageMode ? 'image' : 'gradient');
+    });
+    
+    // Load saved preference
+    const savedMode = localStorage.getItem('backgroundMode');
+    if (savedMode === 'image') {
+        toggleButton.click();
+    }
+});
 
 
 
