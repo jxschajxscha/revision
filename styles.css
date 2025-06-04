@@ -27,7 +27,7 @@ body {
 @media screen and (min-width: 1025px) {
    body {
        background-image: url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg');
-       background-size: 400% !important; /* Show whole image zoomed to 400% */
+       background-size: 100% !important; /* Show whole image zoomed to 400% */
        background-position: center center !important;
        background-repeat: no-repeat !important;
        background-attachment: fixed !important;
