@@ -71,13 +71,28 @@ body.gradient-mode {
    }
    
    body.image-mode {
-       background-image: url('https://media1.tenor.com/m/9014ZFGozAcAAAAd/no-sleep.gif') !important; /* iPad-specific image */
-       background-attachment: fixed !important; /* GIF stays completely still while scrolling */
-       background-size: contain !important; /* Shows full image without cropping */
-       background-position: center !important;
+       /* Multiple layered GIFs to fill the entire screen */
+       background-image: 
+           url('https://media1.tenor.com/m/9014ZFGozAcAAAAd/no-sleep.gif'),
+           url('https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-cover-desktop-wallpaper.gif'),
+           url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKfiIwnJ8yhdoFhf57foTZO2BE0b8KK4uQwQ&s'),
+           url('https://user-images.githubusercontent.com/36126914/154766367-2c3d9c80-3cdc-4790-b15c-7eba5eee9fd2.gif') !important;
+       
+       background-size: 
+           50% 50%,    /* First GIF takes 1/4 of screen */
+           50% 50%,    /* Second GIF takes 1/4 of screen */
+           50% 50%,    /* Third GIF takes 1/4 of screen */
+           50% 50% !important;    /* Fourth GIF takes 1/4 of screen */
+       
+       background-position: 
+           top left,     /* Top-left corner */
+           top right,    /* Top-right corner */
+           bottom left,  /* Bottom-left corner */
+           bottom right !important; /* Bottom-right corner */
+       
        background-repeat: no-repeat !important;
-       background-color: #0c0c0c !important; /* Dark background for any empty space */
-       animation: none !important; /* No animation for image mode */
+       background-attachment: fixed !important;
+       animation: none !important;
    }
 }
 
