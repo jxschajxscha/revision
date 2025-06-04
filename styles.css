@@ -1,37 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap');
 
-
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
 
-
 body {
    font-family: 'Karla', 'Roboto', sans-serif;
-   background-size: 400% 400%;
    min-height: 100vh;
    color: #ffffff;
    line-height: 1.6;
    position: relative;
    overflow-x: hidden;
-   /* Custom Background Image - Uncomment to use */
+   /* Static Background Image */
    background-image: url('https://en.idei.club/uploads/posts/2023-08/1691244315_en-idei-club-p-aesthetic-anime-room-gif-dizain-instagram-29.jpg');
    background-size: cover;
    background-position: center;
    background-attachment: fixed;
    background-repeat: no-repeat;
-   background-blend-mode: overlay;
 }
-
-
-
-
-
-
-
-
 
 /* Subtle paper texture overlay */
 body::before {
@@ -49,13 +37,11 @@ body::before {
    z-index: -1;
 }
 
-
 .container {
    max-width: 1400px;
    margin: 0 auto;
    padding: 2rem;
 }
-
 
 .header {
    text-align: center;
@@ -69,16 +55,7 @@ body::before {
    transition: all 0.3s ease;
    position: relative;
 }
-/* Keep all your existing header styles, then ADD these: */
 
-
-.header {
-   /* your existing styles stay */
-   position: relative; /* just add this line to your existing .header */
-}
-
-
-/* ADD these new styles: */
 .header-content {
    display: flex;
    justify-content: space-between;
@@ -86,14 +63,10 @@ body::before {
    width: 100%;
 }
 
-
 .header-main {
    flex: 1;
    text-align: center;
 }
-
-
-
 
 .time-display {
    position: absolute;
@@ -101,44 +74,39 @@ body::before {
    right: 2.5rem;
    text-align: left;
    min-width: 200px;
-   width: 200px; /* Add this line */
+   width: 200px;
 }
-
 
 .current-time {
    font-family: 'Karla', 'Roboto', sans-serif;
    font-size: 2.5rem;
-   font-weight: 450; /* Change from 500 to 400 */
-   color: rgba(255, 255, 255, 0.7); /* Change from #ffffff to add transparency */
+   font-weight: 450;
+   color: rgba(255, 255, 255, 0.7);
    line-height: 1;
    letter-spacing: -0.02em;
    font-variant-numeric: tabular-nums;
 }
 
-
 .current-date {
    font-family: 'Karla', 'Roboto', sans-serif;
    font-size: 1rem;
    font-weight: 400;
-   color: rgba(255, 255, 255, 0.7); /* Change from #ffffff to add transparency */
+   color: rgba(255, 255, 255, 0.7);
    margin-top: 0.3rem;
    line-height: 1;
    letter-spacing: 0.1em;
 }
 
-
 .time-progress-bar {
-   width: 100%; /* Change this */
-   height: 3px; /* Change from 2px to 3px */
-   background: rgba(255, 255, 255, 0.15); /* Change this */
-   margin-top: 0.8rem; /* Change from 0.5rem */
-   border-radius: 6px; /* Change from 1px */
-   overflow: hidden; /* Add this */
-   position: relative; /* Keep this */
+   width: 100%;
+   height: 3px;
+   background: rgba(255, 255, 255, 0.15);
+   margin-top: 0.8rem;
+   border-radius: 6px;
+   overflow: hidden;
+   position: relative;
 }
 
-
-/* ADD this new CSS rule: */
 .time-progress-fill {
    height: 100%;
    width: 0%;
@@ -147,14 +115,10 @@ body::before {
    transition: width 0.3s ease;
 }
 
-
-
-
 .header:hover {
    transform: translateY(-4px);
    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
 }
-
 
 .header h1 {
    font-size: 3.2rem;
@@ -164,14 +128,12 @@ body::before {
    letter-spacing: -0.02em;
 }
 
-
 .date-range {
    font-size: 1.2rem;
    color: #e2e8f0;
    margin-bottom: 1.5rem;
    font-weight: 400;
 }
-
 
 .progress-overview {
    display: flex;
@@ -181,13 +143,11 @@ body::before {
    flex-wrap: wrap;
 }
 
-
 .total-sessions {
    font-weight: 500;
    color: #f8fafc;
    font-size: 1rem;
 }
-
 
 .completion-bar {
    width: 240px;
@@ -197,7 +157,6 @@ body::before {
    overflow: hidden;
 }
 
-
 .completion-fill {
    height: 100%;
    background: linear-gradient(90deg, #10b981, #059669);
@@ -205,13 +164,11 @@ body::before {
    transition: width 0.6s ease;
 }
 
-
 .completion-text {
    font-weight: 500;
    color: #f8fafc;
    font-size: 1rem;
 }
-
 
 .main-content {
    display: grid;
@@ -219,12 +176,10 @@ body::before {
    gap: 2.5rem;
 }
 
-
 .planner-grid {
    display: grid;
    gap: 1.8rem;
 }
-
 
 .day-card {
    background: rgba(255, 255, 255, 0.10);
@@ -236,36 +191,25 @@ body::before {
    transition: all 0.3s ease;
 }
 
-
 .day-card:hover {
    transform: translateY(-4px);
    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
    background: rgba(255, 255, 255, 0.08);
 }
 
-
-
-
-
-
-
-
 .exam-day {
    border-left: 3px solid #ef4444;
    background: rgba(239, 68, 68, 0.05);
 }
-
 
 .final-day {
    border-left: 3px solid #10b981;
    background: rgba(16, 185, 129, 0.05);
 }
 
-
 .day-header {
    margin-bottom: 1.5rem;
 }
-
 
 .day-header h2 {
    font-size: 1.5rem;
@@ -274,20 +218,17 @@ body::before {
    margin-bottom: 0.4rem;
 }
 
-
 .day-subtitle {
    font-size: 0.95rem;
    color: #cbd5e1;
    font-weight: 400;
 }
 
-
 .sessions {
    display: flex;
    flex-direction: column;
    gap: 0.8rem;
 }
-
 
 .session {
    display: flex;
@@ -302,7 +243,6 @@ body::before {
    width: 100%;
 }
 
-
 .session:hover {
    transform: translateX(4px);
    background: rgba(255, 255, 255, 0.06);
@@ -310,16 +250,14 @@ body::before {
    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-
 .session.completed {
    opacity: 0.6;
    background: rgba(16, 185, 129, 0.1) !important;
    border-color: rgba(16, 185, 129, 0.2);
-   min-width: 250px; /* Minimum width for all completed sessions */
+   min-width: 250px;
    width: auto;
    flex-shrink: 0;
 }
-
 
 .session-number {
    display: flex;
@@ -335,14 +273,12 @@ body::before {
    flex-shrink: 0;
 }
 
-
 .subject-name {
    flex: 1;
    font-weight: 500;
    color: #f8fafc;
    font-size: 1rem;
 }
-
 
 .progress-indicator {
    font-size: 0.8rem;
@@ -353,7 +289,6 @@ body::before {
    border-radius: 6px;
    flex-shrink: 0;
 }
-
 
 .exam-note {
    font-size: 0.8rem;
@@ -366,7 +301,6 @@ body::before {
    flex-shrink: 0;
 }
 
-
 .checkbox {
    width: 20px;
    height: 20px;
@@ -378,18 +312,15 @@ body::before {
    flex-shrink: 0;
 }
 
-
 .checkbox:hover {
    border-color: rgba(255, 255, 255, 0.5);
    transform: scale(1.05);
 }
 
-
 .checkbox.checked {
    background: #10b981;
    border-color: #10b981;
 }
-
 
 .checkbox.checked::after {
    content: '✓';
@@ -401,7 +332,6 @@ body::before {
    font-size: 0.75rem;
    font-weight: bold;
 }
-
 
 /* Calm Subject Colors */
 .chemistry { background: rgba(56, 178, 172, 0.08) !important; }
@@ -417,13 +347,11 @@ body::before {
 .latin { background: rgba(59, 130, 246, 0.08) !important; }
 .philosophy { background: rgba(168, 85, 247, 0.08) !important; }
 
-
 .sidebar {
    display: flex;
    flex-direction: column;
    gap: 2rem;
 }
-
 
 .subject-tracker, .key-reminders {
    background: rgba(255, 255, 255, 0.10);
@@ -435,12 +363,10 @@ body::before {
    transition: all 0.3s ease;
 }
 
-
 .subject-tracker:hover, .key-reminders:hover {
    transform: translateY(-2px);
    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
 }
-
 
 .subject-tracker h3, .key-reminders h3 {
    font-size: 1.2rem;
@@ -450,13 +376,11 @@ body::before {
    text-align: center;
 }
 
-
 .subject-list {
    display: flex;
    flex-direction: column;
    gap: 0.8rem;
 }
-
 
 .subject-item {
    display: flex;
@@ -469,19 +393,16 @@ body::before {
    color: #f8fafc;
 }
 
-
 .subject-item:hover {
    transform: translateX(2px);
    background: rgba(255, 255, 255, 0.06);
 }
-
 
 .subject-progress {
    display: flex;
    align-items: center;
    gap: 0.6rem;
 }
-
 
 .progress-bar {
    width: 60px;
@@ -491,13 +412,11 @@ body::before {
    overflow: hidden;
 }
 
-
 .progress-fill {
    height: 100%;
    background: linear-gradient(90deg, #10b981, #059669);
    transition: width 0.6s ease;
 }
-
 
 .progress-text {
    font-size: 0.8rem;
@@ -505,13 +424,11 @@ body::before {
    color: #e2e8f0;
 }
 
-
 .reminder-list {
    display: flex;
    flex-direction: column;
    gap: 0.8rem;
 }
-
 
 .reminder-item {
    padding: 0.8rem;
@@ -524,103 +441,113 @@ body::before {
    transition: all 0.3s ease;
 }
 
-
 .reminder-item:hover {
    transform: translateX(2px);
    background: rgba(255, 255, 255, 0.06);
 }
-
 
 .reminder-item.exam {
    border-left-color: #ef4444;
    background: rgba(239, 68, 68, 0.05);
 }
 
-
 .reminder-item.strategy {
    border-left-color: #10b981;
    background: rgba(16, 185, 129, 0.05);
 }
 
-
 @media (max-width: 1024px) {
    .main-content {
        grid-template-columns: 1fr;
    }
-  
+   
    .sidebar {
        order: -1;
    }
-  
+   
    .header h1 {
        font-size: 2.5rem;
    }
+   
+   .time-display {
+       position: static;
+       text-align: center;
+       margin-top: 1rem;
+       width: 100%;
+   }
+   
+   .header-content {
+       flex-direction: column;
+       align-items: center;
+   }
 }
-
 
 @media (max-width: 768px) {
    .container {
        padding: 1rem;
    }
-  
+   
    .header {
        padding: 1.5rem;
    }
-  
+   
    .header h1 {
        font-size: 2rem;
    }
-  
+   
    .progress-overview {
        flex-direction: column;
        gap: 1rem;
    }
-  
+   
    .completion-bar {
        width: 200px;
    }
-  
+   
    .session {
        gap: 0.8rem;
    }
-  
+   
    .day-card {
        padding: 1.5rem;
    }
-  
+   
    .subject-tracker, .key-reminders {
        padding: 1.5rem;
    }
+   
+   /* Fix background attachment on mobile */
+   body {
+       background-attachment: scroll;
+   }
 }
 
-
 @media (max-width: 480px) {
-       .header h1 {
+   .header h1 {
        font-size: 1.8rem;
    }
-  
+   
    .session {
        padding: 0.8rem;
    }
-  
+   
    .day-header h2 {
        font-size: 1.3rem;
    }
+   
+   .current-time {
+       font-size: 2rem;
+   }
 }
 
-
-/* Add these drag and drop styles to your existing CSS */
-
-
+/* Drag and drop styles */
 .session {
    cursor: grab;
 }
 
-
 .session:active {
    cursor: grabbing;
 }
-
 
 .session.dragging {
    opacity: 0.5;
@@ -628,28 +555,20 @@ body::before {
    cursor: grabbing;
 }
 
-
 .sessions {
    min-height: 60px;
-}
-.sessions {
    min-width: 100% !important;
 }
-
 
 .session {
    min-width: 300px !important;
    width: 100% !important;
 }
 
-
 .session.completed {
    min-width: 300px !important;
    width: 100% !important;
 }
-
-
-
 
 .sessions:empty::after {
    content: 'Drop sessions here';
@@ -659,8 +578,3 @@ body::before {
    font-style: italic;
    padding: 1rem;
 }
-
-
-
-
-
