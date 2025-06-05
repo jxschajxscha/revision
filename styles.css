@@ -55,29 +55,30 @@ body.gradient-mode {
    animation: gentleFlow 20s ease-in-out infinite;
 }
 
-/* iPad specific fixes */
+//* iPad specific fixes */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
    body {
-       background-attachment: fixed !important; /* Keeps background fixed while scrolling */
+       background-attachment: fixed !important;
    }
    
    body.gradient-mode {
-       background-attachment: fixed !important; /* Gradient stays fixed while scrolling */
-       /* Force animation for iPad */
+       background-attachment: fixed !important;
        -webkit-animation: gentleFlow 20s ease-in-out infinite !important;
        animation: gentleFlow 20s ease-in-out infinite !important;
-       /* Ensure background size for animation */
        background-size: 300% 300% !important;
    }
+   
    body.image-mode {
-   background-color: #0c0c0c !important;
-   background-image: url('https://i.pinimg.com/originals/30/6b/13/306b13a3da81693c8264bcdeb13efab7.jpg') !important;
-   background-size: cover !important;
-   background-position: center !important;
-   background-repeat: repeat !important; /* Tiles the GIF to fill screen */
-   background-attachment: fixed !important;
-   animation: none !important;
+       background-image: url('https://media1.tenor.com/m/9014ZFGozAcAAAAd/no-sleep.gif') !important;
+       background-attachment: fixed !important;
+       background-size: 105% auto !important; /* Just 5% zoom - minimal */
+       background-position: center !important;
+       background-repeat: no-repeat !important;
+       background-color: #0c0c0c !important;
+       animation: none !important;
+   }
 }
+
 
    
 }
