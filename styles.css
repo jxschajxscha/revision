@@ -55,7 +55,7 @@ body.gradient-mode {
    animation: gentleFlow 20s ease-in-out infinite;
 }
 
-//* iPad specific fixes */
+/* iPad specific fixes */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
    body {
        background-attachment: fixed !important;
@@ -71,13 +71,14 @@ body.gradient-mode {
    body.image-mode {
        background-image: url('https://media1.tenor.com/m/9014ZFGozAcAAAAd/no-sleep.gif') !important;
        background-attachment: fixed !important;
-       background-size: 105% auto !important; /* Just 5% zoom - minimal */
+       background-size: contain !important; /* Shows full image */
        background-position: center !important;
-       background-repeat: no-repeat !important;
+       background-repeat: repeat !important; /* Tiles the image to fill gaps */
        background-color: #0c0c0c !important;
        animation: none !important;
    }
 }
+
 
 
    
